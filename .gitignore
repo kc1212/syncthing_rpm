@@ -1,0 +1,7 @@
+.vagrant/*
+BUILD/*
+RPMS/*
+SRPMS/*
+SOURCES/*.zip
+SOURCES/*.tar.gz
+*.rpm
