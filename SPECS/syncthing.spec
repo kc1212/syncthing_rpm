@@ -11,8 +11,8 @@
 %endif
 
 Name:syncthing
-Version:0.11.17
-Release:1.0%{?dist}
+Version:0.11.18
+Release:1%{?dist}
 Summary:Open Source File Synchronization
 License:MIT
 URL:http://syncthing.net/
