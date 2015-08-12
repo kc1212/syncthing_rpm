@@ -61,5 +61,7 @@ install -p -m 0644 %{name}-linux-%{altarch}-v%{version}/etc/linux-systemd/system
 
 
 %changelog
+* Wed Aug 12 2015 kc <kc04bc@gmx.com> 0.11.19-1
+- Updated to 0.11.19, added md5sum validation of syncthing binary
 * Mon Aug 1 2015 kc <kc04bc@gmx.com> 0.11.17-1
 - Initial Version, based on https://github.com/thunderbirdtr/syncthing_rpm
