@@ -11,11 +11,11 @@
 %endif
 
 Name:syncthing
-Version:0.11.18
+Version:0.11.19
 Release:1%{?dist}
 Summary:Open Source File Synchronization
 License:MIT
-URL:http://syncthing.net/
+URL:https://syncthing.net/
 Source0:https://github.com/%{name}/%{name}/releases/download/v%{version}/%{name}-linux-%{altarch}-v%{version}.tar.gz
 ExclusiveArch:x86_64 %{ix86}
 BuildRequires:systemd
@@ -29,6 +29,9 @@ Syncthing replaces proprietary sync and cloud services with something open, trus
 
 %prep
 %setup -c
+cd %{name}-linux-%{altarch}-v%{version}
+echo "$(cat %{name}.md5) %{name}" | md5sum -c
+cd -
 
 %build
 
