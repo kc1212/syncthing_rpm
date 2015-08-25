@@ -11,7 +11,7 @@
 %endif
 
 Name:syncthing
-Version:0.11.20
+Version:0.11.22
 Release:1%{?dist}
 Summary:Open Source File Synchronization
 License:MIT
@@ -61,6 +61,8 @@ install -p -m 0644 %{name}-linux-%{altarch}-v%{version}/etc/linux-systemd/system
 
 
 %changelog
+* Sun Aug 25 2015 kc <kc04bc@gmx.com> 0.11.22-1
+- Updated to 0.11.22
 * Tue Aug 18 2015 kc <kc04bc@gmx.com> 0.11.20-1
 - Updated to 0.11.20
 * Wed Aug 12 2015 kc <kc04bc@gmx.com> 0.11.19-1
