@@ -9,7 +9,7 @@ For the syncthing documentation please refer to http://docs.syncthing.net/. If t
 
 Code is based on based on https://github.com/thunderbirdtr/syncthing_rpm.
 
-### Installing via copr 
+### Installing via copr
     dnf copr enable kc1212/syncthing
     dnf install syncthing
 
@@ -20,3 +20,5 @@ Code is based on based on https://github.com/thunderbirdtr/syncthing_rpm.
     systemctl start syncthing@$(whoami).service
 
     # please see http://docs.syncthing.net/ for more documentation
+
+
