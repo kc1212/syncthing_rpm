@@ -29,9 +29,7 @@ Syncthing replaces proprietary sync and cloud services with something open, trus
 
 %prep
 %setup -c
-cd %{name}-linux-%{altarch}-v%{version}
-echo "$(cat %{name}.md5) %{name}" | md5sum -c
-cd -
+#md5sum no longer necessary, see http://docs.syncthing.net/dev/release-signing.html
 
 %build
 
@@ -61,11 +59,13 @@ install -p -m 0644 %{name}-linux-%{altarch}-v%{version}/etc/linux-systemd/system
 
 
 %changelog
-* Fri Sep 15 2015 kc <kc04bc@gmx.com> 0.11.25-1
+* Fri Nov 6 2015 kc <kc04bc@gmx.com> 0.12.0
+- Removed md5sum since syncthing started using ECDSA
+* Tue Sep 15 2015 kc <kc04bc@gmx.com> 0.11.25-1
 - Updated to 0.11.25, not going to update changelog for simple version updates from now
 * Fri Sep 6 2015 kc <kc04bc@gmx.com> 0.11.24-1
 - Updated to 0.11.24
-* Sun Aug 25 2015 kc <kc04bc@gmx.com> 0.11.22-1
+* Tue Aug 25 2015 kc <kc04bc@gmx.com> 0.11.22-1
 - Updated to 0.11.22
 * Tue Aug 18 2015 kc <kc04bc@gmx.com> 0.11.20-1
 - Updated to 0.11.20
