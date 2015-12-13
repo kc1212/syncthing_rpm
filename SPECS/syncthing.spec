@@ -11,7 +11,7 @@
 %endif
 
 Name:syncthing
-Version:0.12.7
+Version:0.12.8
 Release:1%{?dist}
 Summary:Open Source File Synchronization
 License:MIT
