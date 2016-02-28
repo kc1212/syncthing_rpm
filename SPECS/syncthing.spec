@@ -17,6 +17,7 @@ Summary:Open Source File Synchronization
 License:MIT
 URL:https://syncthing.net/
 Source0:https://github.com/%{name}/%{name}/releases/download/v%{version}/%{name}-linux-%{altarch}-v%{version}.tar.gz
+Source1:https://github.com/%{name}/%{name}/releases/download/v%{version}/sha1sum.txt.asc
 ExclusiveArch:x86_64 %{ix86}
 BuildRequires:systemd
 
@@ -27,13 +28,18 @@ Requires(postun): systemd
 %description
 Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and you deserve to choose where it is stored, if it is shared with some third party and how it's transmitted over the Internet.
 
+
 %prep
 %setup -c
-#md5sum no longer necessary, see http://docs.syncthing.net/dev/release-signing.html
+# %build
+# %install
 
-%build
+# Verify release signature, more info here https://syncthing.net/security.html
+cd %_sourcedir
+cat %SOURCE1 | grep $(basename %SOURCE0) | sha1sum -c
+cd -
 
-%install
+# Install stuff
 rm -rf %{buildroot}
 
 mkdir -p %{buildroot}%{_bindir}
