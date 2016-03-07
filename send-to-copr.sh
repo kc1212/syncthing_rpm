@@ -9,6 +9,7 @@ rpm_release=1 # ideally we want to code this
 # remove syncthing stuff
 rm -f ~/rpmbuild/SPECS/$name*
 rm -f ~/rpmbuild/SOURCES/$name*
+rm -f ~/rpmbuild/SOURCES/sha1sum.txt.asc
 rm -fr ~/rpmbuild/BUILD/$name*
 
 # download and build srpm
